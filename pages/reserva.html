@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Reservar habitación">
+    <meta name="keywords" content="Hotel, Reserva, Habitaciones">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reserva | Hotel</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/elegant-icons.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/slicknav.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .form-box {
+            padding: 25px;
+            border-radius: 10px;
+            background: #ffffffc5;
+            box-shadow: 0 0 15px #00000022;
+        }
+        .acompanante-box {
+            padding: 15px;
+            border-radius: 10px;
+            background: #f8f8f8;
+            margin-bottom: 15px;
+            border: 1px solid #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="preloder"><div class="loader"></div></div>
+
+<header class="header">
+    <div class="header__nav__option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-10">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="rooms.html">Habitaciones</a></li>
+                            <li class="active"><a href="#">Reservar</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<br><br>
+
+<section class="rooms spad">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="form-box">
+
+                    <h3 style="text-align:center; margin-bottom:20px;">Reservar Habitación</h3>
+
+                    <h5 id="room-title" style="text-align:center;"></h5>
+                    <p style="text-align:center; font-size:22px;">
+                        <b><sup>$</sup><span id="previewPrecio"></span> / día</b>
+                    </p>
+
+                    <!-- PREVISUALIZACIÓN -->
+                    <hr>
+                    <h5>Detalle de la reserva:</h5>
+                    <p><b>Fecha Inicio:</b> <span id="previewFechaInicio"></span></p>
+                    <p><b>Fecha Fin:</b> <span id="previewFechaFin"></span></p>
+                    <p><b>Huéspedes:</b> <span id="previewHuespedes"></span></p>
+                     <!-- 🆕 Recordatorio check-in / check-out -->
+                    <div class="alert alert-info mt-3" role="alert">
+                        <strong>Importante:</strong> el <b>check-in</b> es desde las <b>14:00 hrs</b> en adelante
+                        y el <b>check-out</b> es hasta las <b>12:00 hrs</b> del mediodía.
+                    </div>
+                    <div id="pasarelaAcompanantes" style="display:none; margin-top:20px;">
+    <h4>Acompañantes</h4>
+    <div id="pasoPills" class="d-flex gap-2 mb-3"></div>
+    <div id="pasoContenido"></div>
+</div>
+                    
+                    <!-- MÉTODO DE PAGO -->
+                    <hr>
+                    <h5>Método de Pago</h5>
+
+                    <label>
+                        <input type="radio" name="metodoPago" value="Presencial"> Pago Presencial
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="metodoPago" value="WebPay"> WebPay
+                    </label>
+
+                    <br><br>
+
+                    <button id="btnReservar" class="primary-btn"
+        style="width:100%; opacity:1; cursor:not-allowed;" disabled>
+    Reservar Ahora (Presencial)
+</button>
+
+                    <button id="btnPagarWebPay" class="primary-btn"
+                        style="width:100%; display:none; margin-top:10px;">
+                        Pagar con WebPay
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer set-bg" data-setbg="../img/footer-bg.jpg">
+    <div class="container">
+        <p style="color:white; text-align:center; margin-top:20px;">
+            © 2025 Gestión Hotelera Digital
+        </p>
+    </div>
+</footer>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.nice-select.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/jquery.slicknav.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/main.js"></script>
+
+<script src="../js/authStatus.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/reserva.js"></script>
+
+</body>
+</html>

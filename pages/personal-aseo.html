@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Personal de Aseo</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2 class="sidebar-title">Portal Hotel Arellano</h2>
+
+        <ul class="menu">
+            <li class="active" onclick="location.href='personal-aseo.html'">
+                <i class="fa-solid fa-broom"></i> Habitaciones
+            </li>
+            <li onclick="location.href='perfil-aseo.html'">
+                <i class="fa-solid fa-user"></i> Mi Perfil
+            </li>
+
+            <li class="logout" onclick="logoutEmpleado()">
+                <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+            </li>
+        </ul>
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <i class="fa-solid fa-bars btn-menu" onclick="toggleMenu()"></i>
+            <h2>Personal de Aseo</h2>
+            <span id="aseoNombreHeader">Empleado</span>
+        </header>
+
+       <section class="habitaciones">
+    <div class="table-container">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="listaHabitaciones"></tbody>
+        </table>
+    </div>
+</section>
+
+
+    </main>
+
+</div>
+
+<div class="overlay-menu" id="overlayMenu"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/authGuardEmpleado.js"></script>
+<script src="../js/menuMovil.js"></script>
+<script src="../js/personalAseo.js"></script>
+<script src="../js/authStatus.js"></script>
+
+</body>
+</html>
+
+
+</body>
+</html>
